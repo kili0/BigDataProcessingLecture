@@ -3,7 +3,8 @@ import re
 import sys
 
 def convert(download_text):
-    binarydata = open(download_text, 'rb').read() text = binarydata.decode('shift_jis')
+    binarydata = open(download_text, 'rb').read()
+    text = binarydata.decode('shift_jis')
     # ルビ、注釈などの除去
     if '-' in text:
         text = (re.split(r'\-{5,}', text)[2])
