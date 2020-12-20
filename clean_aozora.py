@@ -11,7 +11,8 @@ def convert(download_text):
     if '底本:' in text:
         text = (re.split(r'底本:', text)[0])
 
-    text = re.sub(r'《.+?》', '', text) text = re.sub(r'[#.+?]', '', text)
+    text = re.sub(r'《.+?》', '', text)
+    text = re.sub(r'[#.+?]', '', text)
     text = text.strip()
     return text
 
